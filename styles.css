@@ -1,32 +1,138 @@
 body {
-    background-color: #2C3E50;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+}
+
+.animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none; 
+    z-index: -1; 
 }
 
 .card {
-    background-color: #34495E;
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 300px;
-    border-left: 4px solid yellow;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 .card img {
+    width: 100px;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
 }
 
 .card-content p {
-    color: #ECF0F1;
-    font-size: 14px;
-    line-height: 1.6;
+    margin: 0;
+}
+
+@keyframes moveDots {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100vw);
+    }
+}
+
+.dot {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    width: 10px;
+    height: 10px;
+    animation: moveDots linear infinite;
+}
+
+.dot:nth-child(1) {
+    animation-duration: 5s;
+    left: 10%;
+    top: 10%;
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-duration: 7s;
+    left: 20%;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+.dot:nth-child(3) {
+    animation-duration: 6s;
+    left: 50%;
+    top: 50%;
+    animation-delay: 4s;
+}
+
+.dot:nth-child(4) {
+    animation-duration: 8s;
+    left: 70%;
+    top: 20%;
+    animation-delay: 1s;
+}
+
+.dot:nth-child(5) {
+    animation-duration: 9s;
+    left: 80%;
+    top: 70%;
+    animation-delay: 3s;
+}
+
+.dot:nth-child(6) {
+    animation-duration: 6s;
+    left: 30%;
+    top: 80%;
+    animation-delay: 5s;
+}
+
+.dot:nth-child(7) {
+    animation-duration: 7s;
+    left: 60%;
+    top: 40%;
+    animation-delay: 2s;
+}
+
+.dot:nth-child(8) {
+    animation-duration: 10s;
+    left: 90%;
+    top: 60%;
+    animation-delay: 4s;
+}
+
+.dot:nth-child(9) {
+    animation-duration: 8s;
+    left: 40%;
+    top: 30%;
+    animation-delay: 0s;
+}
+
+.dot:nth-child(10) {
+    animation-duration: 6s;
+    left: 10%;
+    top: 50%;
+    animation-delay: 7s;
+}
+
+.dot:nth-child(11) {
+    animation-duration: 5s;
+    left: 70%;
+    top: 10%;
+    animation-delay: 3s;
+}
+
+.dot:nth-child(12) {
+    animation-duration: 9s;
+    left: 20%;
+    top: 80%;
+    animation-delay: 2s;
 }
