@@ -1,21 +1,32 @@
 body {
-    font-family: Arial, sans-serif;
+    background-color: #2C3E50;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: #34495E;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s;
+    width: 300px;
+    border-left: 4px solid yellow;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    color: #ECF0F1;
+    font-size: 14px;
+    line-height: 1.6;
 }
